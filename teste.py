@@ -1,4 +1,4 @@
-import os
+import os #sistemas operacionais 
 from datetime import datetime, date, time
 from sqlalchemy.orm import sessionmaker
 
@@ -235,4 +235,5 @@ except Exception as e:
     
 finally:
     session.close()
+
     print("Sessão do banco de dados fechada.")
