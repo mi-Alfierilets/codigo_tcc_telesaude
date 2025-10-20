@@ -146,8 +146,7 @@ class Profissional(Base):
             "Psicólogo",
             "Nutricionista",
             "Educador Físico",
-            name='tipo_de_especialidade_options' # Corrected Enum definition
-        ),
+            name='tipo_de_especialidade_options'),
         nullable=False
     )
 
@@ -175,7 +174,7 @@ class Profissional(Base):
     def __init__(self, id_profissional, tipo_de_especialidade, crp_cnr_cref, valor_consulta): # Added crp_cnr_cref
         self.id_profissional = id_profissional
         self.tipo_de_especialidade = tipo_de_especialidade
-        self.crp_cnr_cref = crp_cnr_cref # Assigned the new parameter
+        self.crp_cnr_cref = crp_cnr_cref 
         self.valor_consulta = valor_consulta
 
 
@@ -204,8 +203,8 @@ class Profissional(Base):
 # (Supondo que o id_usuario 5 já foi criado na tabela USUARIO)
 # novo_nutricionista = Profissional(
 #     id_profissional=5,
-#     tipo_de_especialidade="Nutricionista", # Corrected parameter name
-#     crp_cnr_cref="CRN-12345", # Corrected parameter name
+#     tipo_de_especialidade="Nutricionista", 
+#     crp_cnr_cref="CRN-12345", 
 #     valor_consulta=180.00
 # )
 
@@ -493,8 +492,7 @@ class AgendaProfissional(Base):
 
 
 class Avaliacao(Base):
-    __tablename__ = 'AVALIACAO' # Corrected typo
-
+    __tablename__ = 'AVALIACAO' 
     # 1. Chaves
     id_avaliacao = Column(Integer, primary_key=True)
 
@@ -619,4 +617,5 @@ class Notificacao(Base):
 
 Base.metadata.create_all(engine)
 #criação do banco de dados e das tabelas
+
 
