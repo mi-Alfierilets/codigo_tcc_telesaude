@@ -67,8 +67,7 @@ class Usuario(Base):
 
     # Métodos (Lógica da Aplicação)
     def fazer_login(self, senha_informada):
-        # Em um projeto real, você usaria 'bcrypt.checkpw(senha_informada, self.senha)'
-        return self.senha == senha_informada # Simulação simples
+    return self.senha == senha_informada # Simulação simples
 
 
 class Endereco(Base):
@@ -95,8 +94,6 @@ class Endereco(Base):
         Simula a validação do CEP com um serviço externo (como ViaCEP).
         Retornaria True/False se o CEP fosse encontrado.
         """
-        # Em um TCC, você explicaria que esta função faria uma requisição HTTP.
-        # Por simplicidade, assumimos que 8 dígitos válidos é suficiente.
         return len(self.cep) in (8, 9) # 8 sem traço, 9 com traço
 
     def formatar_endereco(self):
@@ -558,7 +555,6 @@ class Avaliacao(Base):
         # media = session.query(func.avg(Avaliacao.nota)).filter_by(profissional_id=profissional_id).scalar()
         # return media if media is not None else 0
 
-        # Implementação simples para o TCC:
         print(f"Simulando cálculo da média de avaliações para o Profissional ID {profissional_id}.")
         return 4.5 # Exemplo de retorno simulado
       
@@ -622,3 +618,5 @@ class Notificacao(Base):
 
 
 Base.metadata.create_all(engine)
+#criação do banco de dados e das tabelas
+
